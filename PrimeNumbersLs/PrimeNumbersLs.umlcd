@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_J4_LEFyxEeWoe8E9xJMmJw">
+  <modelElement href="PrimeNumbersLs.uml#_KgX7MFyxEeWoe8E9xJMmJw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_LIrRUFyxEeWoe8E9xJMmJw" targetItem="_LI2QcFyxEeWoe8E9xJMmJw" sourceItem="_LIqDMFyxEeWoe8E9xJMmJw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_LKsqkVyxEeWoe8E9xJMmJw" targetItem="_LKt4sFyxEeWoe8E9xJMmJw" sourceItem="_LKsqkFyxEeWoe8E9xJMmJw"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_LIqDMFyxEeWoe8E9xJMmJw" sourceConnectionVisual="_LIrRUFyxEeWoe8E9xJMmJw" text="SievePrimes uses the sieve algorithm to calculate primes from 2 to input n&#xD;&#xA;and outputs the result into a txt document.&#xD;&#xA;Information on sieve algorithm can be found here: http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes &#xD;&#xA;@author Leonel Sanchez&#xD;&#xA;@class CS4354&#xD;&#xA;@Version 1.0" item="_LI2QcFyxEeWoe8E9xJMmJw">
+    <modelElement href="PrimeNumbersLs.uml#_KiYtYFyxEeWoe8E9xJMmJw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_LKsqkFyxEeWoe8E9xJMmJw" sourceConnectionVisual="_LKsqkVyxEeWoe8E9xJMmJw" text="PrimeNumbers takes two command line arguments, The first is a number n that is used to find the prime&#xD;&#xA;numbers between 2 and n, while the second is the name of the output file.&#xD;&#xA;@author Leonel Sanchez&#xD;&#xA;@version 1.0" item="_LKt4sFyxEeWoe8E9xJMmJw">
+    <modelElement href="PrimeNumbersLs.uml#_KiYGUFyxEeWoe8E9xJMmJw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_LI2QcFyxEeWoe8E9xJMmJw" comments="_LIqDMFyxEeWoe8E9xJMmJw" targetConnectionVisual="_LIrRUFyxEeWoe8E9xJMmJw" name="SievePrimes">
+    <modelElement href="PrimeNumbersLs.uml#_Kgxj0FyxEeWoe8E9xJMmJw"/>
+    <visualProperties xmi:id="_LI2QcVyxEeWoe8E9xJMmJw" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_LI23gFyxEeWoe8E9xJMmJw" label="+"/>
+    <attributes xmi:id="_LI23gVyxEeWoe8E9xJMmJw" name="n">
+      <modelElement href="PrimeNumbersLs.uml#_KiFycFyxEeWoe8E9xJMmJw"/>
+      <stereotypes xmi:id="_LI23glyxEeWoe8E9xJMmJw" name="LegacyStyledElement">
+        <modelElement href="PrimeNumbersLs.uml#_KiGZgFyxEeWoe8E9xJMmJw"/>
+      </stereotypes>
+      <visibility xmi:id="_LI23g1yxEeWoe8E9xJMmJw" label="~"/>
+      <cardinality xmi:id="_LI23hFyxEeWoe8E9xJMmJw" label="1" max="1" min="1"/>
+      <type xmi:id="_LI23hVyxEeWoe8E9xJMmJw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_LI23hlyxEeWoe8E9xJMmJw" name="outFile">
+      <modelElement href="PrimeNumbersLs.uml#_KiGZgVyxEeWoe8E9xJMmJw"/>
+      <stereotypes xmi:id="_LI23h1yxEeWoe8E9xJMmJw" name="LegacyStyledElement">
+        <modelElement href="PrimeNumbersLs.uml#_KiHAkFyxEeWoe8E9xJMmJw"/>
+      </stereotypes>
+      <visibility xmi:id="_LI23iFyxEeWoe8E9xJMmJw" label="~"/>
+      <cardinality xmi:id="_LI23iVyxEeWoe8E9xJMmJw" label="1" max="1" min="1"/>
+      <type xmi:id="_LI23ilyxEeWoe8E9xJMmJw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_LI23i1yxEeWoe8E9xJMmJw" name="SievePrimes">
+      <modelElement href="PrimeNumbersLs.uml#_Kg0AEFyxEeWoe8E9xJMmJw"/>
+      <keywords xmi:id="_LI23jFyxEeWoe8E9xJMmJw" keyword="create"/>
+      <visibility xmi:id="_LI23jVyxEeWoe8E9xJMmJw" label="+"/>
+      <cardinality xmi:id="_LI23jlyxEeWoe8E9xJMmJw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_LI23j1yxEeWoe8E9xJMmJw">
+        <modelElement href="PrimeNumbersLs.uml#_Kg1OMFyxEeWoe8E9xJMmJw"/>
+        <type xmi:id="_LI23kFyxEeWoe8E9xJMmJw" name="SievePrimes">
+          <modelElement href="PrimeNumbersLs.uml#_Kgxj0FyxEeWoe8E9xJMmJw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_LI23kVyxEeWoe8E9xJMmJw" name="n">
+        <modelElement href="PrimeNumbersLs.uml#_Kg0AEVyxEeWoe8E9xJMmJw"/>
+        <cardinality xmi:id="_LI23klyxEeWoe8E9xJMmJw" label="1" max="1" min="1"/>
+        <type xmi:id="_LI23k1yxEeWoe8E9xJMmJw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_LI23lFyxEeWoe8E9xJMmJw" name="outFile">
+        <modelElement href="PrimeNumbersLs.uml#_Kg0nIFyxEeWoe8E9xJMmJw"/>
+        <cardinality xmi:id="_LI23lVyxEeWoe8E9xJMmJw" label="1" max="1" min="1"/>
+        <type xmi:id="_LI23llyxEeWoe8E9xJMmJw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_LI23l1yxEeWoe8E9xJMmJw" name="computePrimes">
+      <modelElement href="PrimeNumbersLs.uml#_KiDWMFyxEeWoe8E9xJMmJw"/>
+      <visibility xmi:id="_LI23mFyxEeWoe8E9xJMmJw" label="+"/>
+      <cardinality xmi:id="_LI23mVyxEeWoe8E9xJMmJw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_LI23mlyxEeWoe8E9xJMmJw" name="primeFile">
+        <modelElement href="PrimeNumbersLs.uml#_KiDWMVyxEeWoe8E9xJMmJw"/>
+        <cardinality xmi:id="_LI23m1yxEeWoe8E9xJMmJw" label="1" max="1" min="1"/>
+        <type xmi:id="_LI23nFyxEeWoe8E9xJMmJw" name="BufferedWriter">
+          <modelElement href="PrimeNumbersLs.uml#_Kh9PkFyxEeWoe8E9xJMmJw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_LI23nVyxEeWoe8E9xJMmJw" name="print">
+      <modelElement href="PrimeNumbersLs.uml#_KiD9QFyxEeWoe8E9xJMmJw"/>
+      <visibility xmi:id="_LI23nlyxEeWoe8E9xJMmJw" label="-"/>
+      <cardinality xmi:id="_LI23n1yxEeWoe8E9xJMmJw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_LI23oFyxEeWoe8E9xJMmJw" name="primes">
+        <modelElement href="PrimeNumbersLs.uml#_KiD9QVyxEeWoe8E9xJMmJw"/>
+        <cardinality xmi:id="_LI23oVyxEeWoe8E9xJMmJw" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_LI23olyxEeWoe8E9xJMmJw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_LI23o1yxEeWoe8E9xJMmJw" name="primeFile">
+        <modelElement href="PrimeNumbersLs.uml#_KiD9QlyxEeWoe8E9xJMmJw"/>
+        <cardinality xmi:id="_LI23pFyxEeWoe8E9xJMmJw" label="1" max="1" min="1"/>
+        <type xmi:id="_LI23pVyxEeWoe8E9xJMmJw" name="BufferedWriter">
+          <modelElement href="PrimeNumbersLs.uml#_Kh9PkFyxEeWoe8E9xJMmJw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_LKt4sFyxEeWoe8E9xJMmJw" comments="_LKsqkFyxEeWoe8E9xJMmJw" targetConnectionVisual="_LKsqkVyxEeWoe8E9xJMmJw" name="PrimeNumbers">
+    <modelElement href="PrimeNumbersLs.uml#_KgnLwFyxEeWoe8E9xJMmJw"/>
+    <visualProperties xmi:id="_LKt4sVyxEeWoe8E9xJMmJw" position="456.0,113.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_LKt4slyxEeWoe8E9xJMmJw" label="+"/>
+    <operations xmi:id="_LKt4s1yxEeWoe8E9xJMmJw" name="main" staticOperation="true">
+      <modelElement href="PrimeNumbersLs.uml#_KguggFyxEeWoe8E9xJMmJw"/>
+      <visibility xmi:id="_LKt4tFyxEeWoe8E9xJMmJw" label="+"/>
+      <cardinality xmi:id="_LKt4tVyxEeWoe8E9xJMmJw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_LKt4tlyxEeWoe8E9xJMmJw" name="args">
+        <modelElement href="PrimeNumbersLs.uml#_KguggVyxEeWoe8E9xJMmJw"/>
+        <cardinality xmi:id="_LKt4t1yxEeWoe8E9xJMmJw" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_LKt4uFyxEeWoe8E9xJMmJw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_J24SQFyxEeWoe8E9xJMmJw" name="PrimeNumbersLs">
+    <eAnnotations xmi:id="_KYiN0FyxEeWoe8E9xJMmJw" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_KYiN0VyxEeWoe8E9xJMmJw" source="codegen">
+        <details xmi:id="_KYi04FyxEeWoe8E9xJMmJw" key="codegenDirectory" value="/PrimeNumbersLs/src"/>
+        <details xmi:id="_LIWhMFyxEeWoe8E9xJMmJw" key="AssociatedSourceCode" value="/PrimeNumbersLs/src/primenumber/PrimeNumbers.java;1263774967/1;/PrimeNumbersLs/src/primenumber/SievePrimes.java;2432634357/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_KgM8EFyxEeWoe8E9xJMmJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_KgM8EVyxEeWoe8E9xJMmJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_KgM8ElyxEeWoe8E9xJMmJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_KgM8E1yxEeWoe8E9xJMmJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_KgM8FFyxEeWoe8E9xJMmJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_KgNjIFyxEeWoe8E9xJMmJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_KgNjIVyxEeWoe8E9xJMmJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_KgNjIlyxEeWoe8E9xJMmJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_KgOKMFyxEeWoe8E9xJMmJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_KgSboFyxEeWoe8E9xJMmJw" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_KgTCsFyxEeWoe8E9xJMmJw" name="io">
+        <packagedElement xmi:type="uml:Class" xmi:id="_Kh9PkFyxEeWoe8E9xJMmJw" name="BufferedWriter"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Kh_EwFyxEeWoe8E9xJMmJw" name="IOException"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_KgX7MFyxEeWoe8E9xJMmJw" name="primenumber">
+      <packagedElement xmi:type="uml:Class" xmi:id="_KgnLwFyxEeWoe8E9xJMmJw" name="PrimeNumbers">
+        <ownedComment xmi:id="_KiYGUFyxEeWoe8E9xJMmJw">
+          <body>PrimeNumbers takes two command line arguments, The first is a number n that is used to find the prime&#xD;
+numbers between 2 and n, while the second is the name of the output file.&#xD;
+@author Leonel Sanchez&#xD;
+@version 1.0</body>
+        </ownedComment>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KiUb8FyxEeWoe8E9xJMmJw" name="main" specification="_KguggFyxEeWoe8E9xJMmJw">
+          <ownedParameter xmi:id="_KiUb8VyxEeWoe8E9xJMmJw" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KiUb8lyxEeWoe8E9xJMmJw" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>String fileName = args[1]+ &quot;.txt&quot;;&#xD;
+		int maxPrime = Integer.parseInt(args[0]);&#xD;
+		&#xD;
+		try {&#xD;
+			BufferedWriter primeFile = new BufferedWriter(new FileWriter(fileName));&#xD;
+			&#xD;
+			primeFile.write(&quot;N is &quot; + maxPrime);&#xD;
+			primeFile.newLine();&#xD;
+			primeFile.write(&quot;File Name is &quot; + fileName);&#xD;
+			primeFile.newLine();&#xD;
+			SievePrimes primes = new SievePrimes(maxPrime, fileName);&#xD;
+			primes.computePrimes(primeFile);			&#xD;
+			primeFile.close();&#xD;
+			&#xD;
+		} catch (IOException e) {&#xD;
+			// TODO Auto-generated catch block&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+				&#xD;
+		System.out.println(&quot;Data is output in file &quot; + fileName);		&#xD;
+		&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_KguggFyxEeWoe8E9xJMmJw" name="main" isStatic="true" method="_KiUb8FyxEeWoe8E9xJMmJw">
+          <ownedParameter xmi:id="_KguggVyxEeWoe8E9xJMmJw" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KgwVsFyxEeWoe8E9xJMmJw" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Kgxj0FyxEeWoe8E9xJMmJw" name="SievePrimes">
+        <ownedComment xmi:id="_KiYtYFyxEeWoe8E9xJMmJw">
+          <body>SievePrimes uses the sieve algorithm to calculate primes from 2 to input n&#xD;
+and outputs the result into a txt document.&#xD;
+Information on sieve algorithm can be found here: http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes &#xD;
+@author Leonel Sanchez&#xD;
+@class CS4354&#xD;
+@Version 1.0</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_KiFycFyxEeWoe8E9xJMmJw" name="n" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_KiGZgVyxEeWoe8E9xJMmJw" name="outFile" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KiW4MFyxEeWoe8E9xJMmJw" name="SievePrimes" specification="_Kg0AEFyxEeWoe8E9xJMmJw">
+          <ownedParameter xmi:id="_KiW4MVyxEeWoe8E9xJMmJw" name="n">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_KiW4MlyxEeWoe8E9xJMmJw" name="outFile">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_KiW4M1yxEeWoe8E9xJMmJw" type="_Kgxj0FyxEeWoe8E9xJMmJw" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.n = n;&#xD;
+		this.outFile=outFile;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KiXfQFyxEeWoe8E9xJMmJw" name="computePrimes" specification="_KiDWMFyxEeWoe8E9xJMmJw">
+          <ownedParameter xmi:id="_KiXfQVyxEeWoe8E9xJMmJw" name="primeFile" type="_Kh9PkFyxEeWoe8E9xJMmJw"/>
+          <language>java</language>
+          <body>boolean[] primeArray = new boolean[n+1];&#xD;
+		for (int i = 1; i &lt;= n; i++)&#xD;
+		{&#xD;
+			primeArray[i]=true;&#xD;
+			&#xD;
+		}&#xD;
+	&#xD;
+		//nested loop to turn any element with a multiple of a number 2-7 to false.&#xD;
+		for(int i = 2; i &lt;= Math.sqrt(n);i++)&#xD;
+		{&#xD;
+			//System.out.println(i + &quot; &quot; + primeArray[i]);&#xD;
+			if (primeArray[i] == true)&#xD;
+			{&#xD;
+			&#xD;
+				for (int j = (int) Math.pow(i, 2) ; j &lt;= n;)&#xD;
+				{&#xD;
+					primeArray[j] = false;				&#xD;
+					j = j + i;&#xD;
+										&#xD;
+				}&#xD;
+				&#xD;
+			}&#xD;
+		}&#xD;
+		&#xD;
+		print(primeArray, primeFile);&#xD;
+		&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KiXfQlyxEeWoe8E9xJMmJw" name="print" specification="_KiD9QFyxEeWoe8E9xJMmJw">
+          <ownedParameter xmi:id="_KiXfQ1yxEeWoe8E9xJMmJw" name="primes">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KiXfRFyxEeWoe8E9xJMmJw" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_KiXfRVyxEeWoe8E9xJMmJw" name="primeFile" type="_Kh9PkFyxEeWoe8E9xJMmJw"/>
+          <language>java</language>
+          <body>for ( int i = 2; i &lt;=n;i++)&#xD;
+		{&#xD;
+			if(primes[i]==true)&#xD;
+			{&#xD;
+				try {&#xD;
+					primeFile.write(i + &quot; &quot;);&#xD;
+				} catch (IOException e) {&#xD;
+					// TODO Auto-generated catch block&#xD;
+					e.printStackTrace();&#xD;
+				}&#xD;
+			}&#xD;
+		}&#xD;
+		&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_Kg0AEFyxEeWoe8E9xJMmJw" name="SievePrimes" method="_KiW4MFyxEeWoe8E9xJMmJw">
+          <eAnnotations xmi:id="_Kg0nIVyxEeWoe8E9xJMmJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_Kg0nIlyxEeWoe8E9xJMmJw" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_Kg0AEVyxEeWoe8E9xJMmJw" name="n">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Kg0nIFyxEeWoe8E9xJMmJw" name="outFile">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Kg1OMFyxEeWoe8E9xJMmJw" type="_Kgxj0FyxEeWoe8E9xJMmJw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_KiDWMFyxEeWoe8E9xJMmJw" name="computePrimes" method="_KiXfQFyxEeWoe8E9xJMmJw">
+          <ownedParameter xmi:id="_KiDWMVyxEeWoe8E9xJMmJw" name="primeFile" type="_Kh9PkFyxEeWoe8E9xJMmJw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_KiD9QFyxEeWoe8E9xJMmJw" name="print" visibility="private" method="_KiXfQlyxEeWoe8E9xJMmJw">
+          <ownedParameter xmi:id="_KiD9QVyxEeWoe8E9xJMmJw" name="primes">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KiEkUFyxEeWoe8E9xJMmJw" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_KiD9QlyxEeWoe8E9xJMmJw" name="primeFile" type="_Kh9PkFyxEeWoe8E9xJMmJw"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_KYl4MFyxEeWoe8E9xJMmJw">
+      <eAnnotations xmi:id="_KYntYFyxEeWoe8E9xJMmJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_KYvCIFyxEeWoe8E9xJMmJw" base_Package="_J24SQFyxEeWoe8E9xJMmJw">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:Reference xmi:id="_Kh-dsFyxEeWoe8E9xJMmJw" base_Element="_Kh9PkFyxEeWoe8E9xJMmJw"/>
+  <UMLLabProfile:Reference xmi:id="_Kh_r0FyxEeWoe8E9xJMmJw" base_Element="_Kh_EwFyxEeWoe8E9xJMmJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_KiGZgFyxEeWoe8E9xJMmJw" base_Element="_KiFycFyxEeWoe8E9xJMmJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_KiHAkFyxEeWoe8E9xJMmJw" base_Element="_KiGZgVyxEeWoe8E9xJMmJw"/>
+</xmi:XMI>
